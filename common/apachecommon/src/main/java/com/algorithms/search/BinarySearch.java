@@ -21,15 +21,8 @@ public class BinarySearch {
             }else{
                 return mIndex;
             }
-
-
-
         }
         return -1;
     }
-//    public void exch(int [] arr,int a,int b){
-//        int temp=arr[b];
-//        arr[b]=arr[a];
-//        arr[a]=temp;
-//    }
+
 }
