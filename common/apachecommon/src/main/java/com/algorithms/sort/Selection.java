@@ -17,7 +17,6 @@ public class Selection extends SortTemplate{
                 }
             }
             exch(a,i,minIndex);
-
         }
 
     }
