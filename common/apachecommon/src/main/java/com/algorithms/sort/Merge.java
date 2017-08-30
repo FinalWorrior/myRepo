@@ -23,37 +23,22 @@ public class Merge extends SortTemplate{
 //        merge(a,0,1,4);
         //测试sort
         sort(a);
-
-                show(a);
+        show(a);
     }
     public static void merge(Comparable[] arr,int lo, int mid,int hi){
-        //左半部分最小数的指针
-        int i=lo;
-        //右半部分最小数的指针
-        int j=mid+1;
-
-        //复制
+        int i=lo;  //左半部分最小数的指针
+        int j=mid+1;//右半部分最小数的指针
         for (int k = lo; k < hi+1; k++) {
             extra[k]=arr[k];
         }
         for (int k = lo; k <hi+1; k++) {
-//            if(extra[i].compareTo(extra[j])<=0){
-//                arr[k]=extra[i++];
-//            }else if (extra[i].compareTo(extra[j])>0){
-//                arr[k]=extra[j++];
-//            }else if(i>mid){
-//                arr[k]=extra[j++];
-//            }else{
-//                arr[k]=extra[i++];
-//            }
-            if(i>mid){
+            if(i>mid){//左半部分的用完取右半部分的
                 arr[k]=extra[j++];
-            }else if (j>hi){
+            }else if (j>hi){//右半部分用完取左半部分
                 arr[k]=extra[i++];
-
-            }else if(extra[i].compareTo(extra[j])>0){
+            }else if(extra[i].compareTo(extra[j])>0){//左边比右边大取右边的
                 arr[k]=extra[j++];
-            }else{
+            }else{//右边比左边大于等于取左边的
                 arr[k]=extra[i++];
             }
         }

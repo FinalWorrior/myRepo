@@ -11,6 +11,7 @@ public class Selection extends SortTemplate{
 
             int minIndex=i;
             int j;
+            //每次遍历找出最小的索引
             for(j=i+1;j<a.length;j++){
                 if(a[j].compareTo(a[minIndex])<0){
                     minIndex=j;
